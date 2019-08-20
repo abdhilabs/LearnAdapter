@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Ini RecyclerView Vertical" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvListVertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Ini RecyclerView Horizontal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvListHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Ini RecyclerView Grid" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvListGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btnMove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With Library Gouphy" />
+    </LinearLayout>
+</ScrollView>
