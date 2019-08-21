@@ -9,8 +9,11 @@ import com.abdhilabs.learnadapter.model.Hero
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_list.view.*
 
-class HeroAdapter(private val hero: List<Hero>, private val listener: HeroListener) :
-    RecyclerView.Adapter<HeroHolder>() {
+/**
+ * Buat adapternya (Wajib)
+ */
+
+class HeroAdapter(private val hero: List<Hero>, private val listener: HeroListener) : RecyclerView.Adapter<HeroHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroHolder {
         return HeroHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false))
@@ -23,10 +26,12 @@ class HeroAdapter(private val hero: List<Hero>, private val listener: HeroListen
     }
 }
 
+//Interface untuk btnClick
 interface HeroListener {
     fun onHeroClick(hero: Hero)
 }
 
+//Buat Holdernya
 class HeroHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val tvHeroName = view.txtHero
@@ -36,6 +41,7 @@ class HeroHolder(view: View) : RecyclerView.ViewHolder(view) {
         tvHeroName.text = hero.name
         Picasso.get().load(hero.image).into(imageHero)
 
+        //buat click
         itemView.setOnClickListener { listener.onHeroClick(hero) }
     }
 
